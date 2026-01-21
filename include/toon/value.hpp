@@ -48,6 +48,16 @@ public:
     const Array&       asArray()  const;
     const Object&      asObject() const;
 
+    // ---- Array/Object operators ----
+    Value& operator[](size_t index);                    // Array access (throws if out of bounds)
+    const Value& operator[](size_t index) const;  
+
+    Value& operator[](const std::string& key);      // Object access (creates key if not found)
+    const Value& operator[](const std::string& key) const;
+
+    // ---- Size methods ----
+    size_t size() const; 
+
 private:
     using Storage = std::variant<
         std::nullptr_t,

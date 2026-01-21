@@ -1,0 +1,36 @@
+# Build artifacts
+build/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.so
+*.dylib
+
+# VS Code settings
+\.vscode/
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Temporary files
+*.swp
+*~
+*.tmp
+*.log
+
+# Backup/Misc
+
+*.bak
+*.orig
+
+# Optional CMake user files
+*.user
+*.user.*.cmake

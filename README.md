@@ -2,6 +2,31 @@
 
 A lightweight C++ parser for JSON-like structured data. Parses text into a typed `Value` tree you can traverse, modify, and serialize back out.
 
+## Integration
+
+Add toon to your CMake project with `FetchContent`:
+
+```cmake
+include(FetchContent)
+
+FetchContent_Declare(
+    toon
+    GIT_REPOSITORY https://github.com/sgtanvi/toon.git
+    GIT_TAG        main
+)
+FetchContent_MakeAvailable(toon)
+
+target_link_libraries(your_target PRIVATE toon_lib)
+```
+
+Then include the header:
+
+```cpp
+#include "toon/json.hpp"
+```
+
+That's it — CMake automatically handles the include path because `toon_lib` declares it publicly.
+
 ## Build
 
 Requires CMake 3.20+ and a C++17 compiler.

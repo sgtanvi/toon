@@ -1,4 +1,4 @@
-# toon
+# c++ toon parser
 
 A lightweight C++ parser for JSON-like structured data. Parses text into a typed `Value` tree you can traverse, modify, and serialize back out.
 
